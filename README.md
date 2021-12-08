@@ -11,4 +11,10 @@ First and last name of all registered members.
 ### Borrowings Table
 Information on the books borrowed by the members. 
 
+### Queries and subqueries
+To find out required data from database
 
+### Write operations
+Update books
+Delete books
+Insert books
