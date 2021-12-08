@@ -19,7 +19,7 @@ VALUES
 
 Create TABLE Members  
 (  
-    Members_Id int PRIMARY KEY,  
+    Member_Id int PRIMARY KEY,  
     First_Name varchar(50), 
     Last_Name varchar(50) 
 ) 
@@ -32,7 +32,7 @@ VALUES
     
 CREATE TABLE Borrowings  
 (  
-    Borrowings_Id int PRIMARY KEY,  
+    Borrowing_Id int PRIMARY KEY,  
     Book_Id int,
     Member_Id int,
     Borrowed_Date date,  
