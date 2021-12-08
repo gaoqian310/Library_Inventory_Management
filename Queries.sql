@@ -29,6 +29,20 @@ WHERE Books.Author='Dan Brown';
 SELECT
 Members.First_Name AS "First Name",
 Members.Last_Name AS "Last Name"
-FROM Borrowings JOIN Books ON Borrowings.Book_Id=Books.Book_Id
+FROM Borrowings 
+JOIN Books ON Borrowings.Book_Id=Books.Book_Id
 JOIN Members ON Members.Member_Id=Borrowings.Member_Id
 WHERE Books.Author='Dan Brown'
+
+
+# To aggregate the results from last step, we can find out each individual memeber borrowed how many books.
+
+SELECT
+Members.First_Name AS "First Name",
+Members.Last_Name AS "Last Name",
+count(*) AS "Number of books borrowed"
+FROM Borrowings
+JOIN Books ON Borrowings.Book_Id=Books.Book_Id
+JOIN Members ON Members.Member_Id=Borrowings.Member_Id
+WHERE Books.Author='Dan Brown'
+GROUP BY Members.First_Name, Members.Last_Name;
