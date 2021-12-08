@@ -46,3 +46,10 @@ JOIN Books ON Borrowings.Book_Id=Books.Book_Id
 JOIN Members ON Members.Member_Id=Borrowings.Member_Id
 WHERE Books.Author='Dan Brown'
 GROUP BY Members.First_Name, Members.Last_Name;
+
+# To get the total stock of all books written by each author
+
+SELECT Author, sum(Stock)
+FROM Books
+GROUP BY Author;
+
