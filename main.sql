@@ -1,17 +1,27 @@
 create table book_details (
-    bookid primary key
+    id primary key,
     book_title varchar2(100), 
     author varchar2(100), 
-    data_of_publication date, 
-    stock_available int,
+    date_of_publication date, 
+    stock_available int
     );
 
 create table members (
-    first_name varchar(50)
-    last_name varcha(50)
+    memberid primary key,
+    first_name varchar(50),
+    last_name varchar(50)
     );
     
 create table borrowings (
-    first_name varchar(50)
-    last_name varcha(50)
+    bookid foreign key,
+    memberid foreign key,
+    date_of_borrowed date,
+    date_of_due date
     );
+
+
+# Find books written by "Dan Brown"
+
+SELECT bookid AS "id", title
+FROM books
+WHERE author='Dan Brown';
