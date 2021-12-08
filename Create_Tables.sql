@@ -35,8 +35,8 @@ CREATE TABLE Borrowings
     Borrowings_Id int PRIMARY KEY,  
     Book_Id int,
     Member_Id int,
-    Borrowed_From date,  
-    Borrowed_To date  
+    Borrowed_Date date,  
+    Returned_Date date  
 )  
 
 INSERT INTO Borrowings
