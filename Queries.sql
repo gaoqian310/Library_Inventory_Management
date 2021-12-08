@@ -53,3 +53,16 @@ SELECT Author, sum(Stock)
 FROM Books
 GROUP BY Author;
 
+# To get the average stock
+SELECT avg(Stock) FROM Books;
+
+# To find books have stock higher than average
+SELECT *
+FROM Books
+WHERE Stock>(SELECT avg(Stock) FROM Books);
+
+# The same as
+
+SELECT *
+FROM Books
+WHERE Stock>4.000
