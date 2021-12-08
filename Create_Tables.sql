@@ -16,7 +16,14 @@ VALUES
     (3, 'Franny and Zooey','Bob Brown',2000-04-11,3),
     (4, 'The Great Gatsby','Dan Brown',1999-04-11,2),
     (5, 'Programming Concept','Danis Brown',1998-11-11,10)
-  
+
+Create TABLE Members  
+(  
+    Members_Id int PRIMARY KEY,  
+    First_Name varchar(50), 
+    Last_Name varchar(50) 
+) 
+
 CREATE TABLE Borrowings  
 (  
     Borrowings_Id int PRIMARY KEY,  
