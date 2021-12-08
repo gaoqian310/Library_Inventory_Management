@@ -10,3 +10,25 @@ WHERE Author='Dan Brown';
 SELECT Books.Book_Title AS "Title", Borrowings.Returned_Date AS "Return Date"
 FROM Borrowings JOIN Books ON Borrowings.Book_Id=Books.Book_Id
 WHERE Books.Author='Dan Brown';
+
+# Find the First Name and Last Name of the member who has borrowed a book written by "Dan Brown"
+
+# 1. JOIN Borrowings, Books and Members TABLE together
+# SELECT * FROM Borrowings 
+#JOIN Books ON Borrowings.Book_Id=Books.Book_Id 
+#JOIN Members ON Members.Member_Id=Borrowings.Member_Id
+
+# 2. Find Author is "Dan Brown"
+#WHERE Books.Author='Dan Brown'
+
+# 3. Show the result is asking for, which is First Name and Last Name
+#SELECT
+#Members.First_Name AS "First Name",
+#Members.Last_Name AS "Last Name"
+
+SELECT
+Members.First_Name AS "First Name",
+Members.Last_Name AS "Last Name"
+FROM Borrowings JOIN Books ON Borrowings.Book_Id=Books.Book_Id
+JOIN Members ON Members.Member_Id=Borrowings.Member_Id
+WHERE Books.Author='Dan Brown'
