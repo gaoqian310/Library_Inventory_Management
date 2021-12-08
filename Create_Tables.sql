@@ -24,6 +24,12 @@ Create TABLE Members
     Last_Name varchar(50) 
 ) 
 
+INSERT INTO Members
+VALUES
+    (1001, 'Mike','Hilton'),
+    (1002, 'Kent','White'),
+    (1003, 'George','Green')
+    
 CREATE TABLE Borrowings  
 (  
     Borrowings_Id int PRIMARY KEY,  
@@ -32,3 +38,11 @@ CREATE TABLE Borrowings
     Borrowed_From date,  
     Borrowed_To date  
 )  
+
+INSERT INTO Borrowings
+VALUES
+    (2001, 1, 1002, '2021-09-10', '2021-10-10'),
+    (2002, 2, 1003, '2021-09-20', '2021-10-05'),
+    (2003, 1, 1002, '2021-09-25', '2021-10-10'),
+    (2004, 3, 1003, '2021-09-27', '2020-11-01'),
+    (2005, 4, 1001, '2021-10-15', '2021-11-05')
