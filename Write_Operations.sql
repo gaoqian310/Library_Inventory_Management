@@ -9,6 +9,7 @@ WHERE Author='Dan Brown';
 DELETE FROM Books
 WHERE Author='Dan Brown';
 
+
 # INSERT New Books
 
 INSERT INTO Books
